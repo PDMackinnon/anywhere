@@ -31,7 +31,8 @@ var myApp = {
             
         };
         var options = {
-        filter: 1
+			frequency: 3000
+        // filter: 1
         }; // Update every 1 degrees change
 
         
