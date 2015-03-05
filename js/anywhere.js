@@ -20,6 +20,7 @@ var myApp = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
        
+		document.getElementById("headsup").innerText = "OK device ready";
         
         function onSuccess(heading) {
             document.getElementById("headsup").innerText = "OK Heading: " + heading.magneticHeading;
