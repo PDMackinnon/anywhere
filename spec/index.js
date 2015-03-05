@@ -16,30 +16,30 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-describe('app', function() {
+describe('myApp', function() {
     describe('initialize', function() {
         it('should bind deviceready', function() {
             runs(function() {
-                spyOn(app, 'onDeviceReady');
-                app.initialize();
+                spyOn(myApp, 'onDeviceReady');
+                myApp.initialize();
                 helper.trigger(window.document, 'deviceready');
             });
 
             waitsFor(function() {
-                return (app.onDeviceReady.calls.length > 0);
+                return (myApp.onDeviceReady.calls.length > 0);
             }, 'onDeviceReady should be called once', 500);
 
             runs(function() {
-                expect(app.onDeviceReady).toHaveBeenCalled();
+                expect(myApp.onDeviceReady).toHaveBeenCalled();
             });
         });
     });
 
     describe('onDeviceReady', function() {
         it('should report that it fired', function() {
-            spyOn(app, 'receivedEvent');
-            app.onDeviceReady();
-            expect(app.receivedEvent).toHaveBeenCalledWith('deviceready');
+            spyOn(myApp, 'receivedEvent');
+            myApp.onDeviceReady();
+            expect(myApp.receivedEvent).toHaveBeenCalledWith('deviceready');
         });
     });
 
